@@ -8,7 +8,12 @@ class Cart{
 
   //Type the instance functions below this comment.
   additem(i,q){
-    
-  }
 
+  }
+  totalcart(){
+
+  }
+  subcart(days){
+    var shipdays3 = 
+  }
 }
