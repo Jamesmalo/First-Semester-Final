@@ -8,8 +8,8 @@ class Item{
 }
 
 //Create your three test items below this comment.
-var videogame1 = {"Call of Duty:Infinte Warfare","$59.99","$5.00"}
+var videogame1 = {"Call of Duty:Infinte Warfare",59.99,5}
 
-var videogame2 = {"Madden NFL 17","$59.99","$5.00"}
+var videogame2 = {"Madden NFL 17",59.99,5}
 
-var videogame3 = {"Battlefield 1","$59.99","$5.00"}
+var videogame3 = {"Battlefield 1",59.99,5}

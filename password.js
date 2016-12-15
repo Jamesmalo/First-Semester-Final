@@ -8,27 +8,35 @@ class Password{
 
   //Instance functions below this comment.
   validPublicKey(){
-    for(let i=0;i<this.publickey.length;i++){
-      if(this.publickey.length<8){
-        return false;
-      }
-      else if(this.publickey.length>25;){
-        return false;
-      }
-      else if(this.publickey.length>=8){
+    if(this.publickey.length >= 8 && this.publickey.length <=25 ){
         return true;
       }
-      else if(this.publickey.length<=25){
-        return true
-      }
-      }
+    else{
+      return false;
     }
   }
   validPrivateKey(){
-
+    if(this.privatekey[4] == "-" && this.privatekey[9] == "-"){
+      
+    }
   }
+
+    }
   //Static function below this comment.
   static.makePrivateKey(){
-
+    let key = "";
+    let limit = 14;
+    for(let i=0;i<limit;i++){
+      if(i == 4 || i == 9){
+        key = key + "-";
+      }
+      else{
+        let number = math.random();
+        number = math.floor(number*10)
+        number = string(number)
+        key = key + number;
+      }
+    }
+    return key;
   }
 }
