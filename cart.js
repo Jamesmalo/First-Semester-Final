@@ -22,7 +22,10 @@ class Cart{
   subcart(days){
     let subCart = new Cart([],[]);
     for(let i=0;i < this.itemList.length;i++){
-      this.
+      if(this.itemList[i].shipping == days){
+        subcart.push([i]);
+      }
+      return subcart;
     }
   }
 }

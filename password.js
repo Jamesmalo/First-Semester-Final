@@ -1,3 +1,4 @@
+//w3schools was a big help for me
 class Password{
   //The first part of the class.
   constructor(pu,pr){
@@ -17,16 +18,20 @@ class Password{
   }
   validPrivateKey(){
     if(this.privatekey[4] == "-" && this.privatekey[9] == "-"){
-      
+      for(let i=0;i<this.privatekey.length;i++){
+        this.privatekey[i].isNan(i);
+      }
+      return false;
+    }
+    else{
+      return true;
     }
   }
-
-    }
   //Static function below this comment.
-  static.makePrivateKey(){
+  static makePrivateKey(){
     let key = "";
     let limit = 14;
-    for(let i=0;i<limit;i++){
+      for(let i=0;i<limit;i++){
       if(i == 4 || i == 9){
         key = key + "-";
       }
