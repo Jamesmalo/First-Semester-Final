@@ -17,13 +17,14 @@ class Password{
     }
   }
   validPrivateKey(){
-    if(this.privatekey[4] == "-" && this.privatekey[9] == "-"){
-      for(let i=0;i<this.privatekey.length;i++){
-        this.privatekey[i].isNan(i);
+    for(let i=0;i<this.privatekey.length;i++){
+      if(this.privatekey[4] != "-" || this.privatekey[9] != "-"){
+        return false;
       }
-      return false;
+      else if(Number.isNaN(Number(this.privatekey[i]))){
+        return false;
+      }
     }
-    else{
       return true;
     }
   }
